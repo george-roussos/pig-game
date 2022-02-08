@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--instr">📝 Instructions</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+
+      <div class="modal hidden">
+        <button class="btn close-modal">&times;</button>
+        <h1>Pig Game</h1>
+        <p>
+          In pig game, two players race to collect 100 points before the other
+          one. Each player rolls a dice. If the dice is 1, the player forfeits
+          their turn, loses their points for the round and the other player plays 
+          instead. If the dice is not 1, the player can either continue playing 
+          (until dice == 1), or they can hold their points, by adding them to their 
+          total score and giving up their turn.
+        <br></br>
+        </p>
+        <p>🔄 New game: Starts game with Player 1 default.</p>
+        <p>🎲 Roll dice: Generates random roll of dice.</p>
+        <p>📥 Hold: Adds points to total.</p>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
